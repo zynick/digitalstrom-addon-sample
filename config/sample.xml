@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<subscriptions version="1">
+
+  <subscription event-name="model_ready" handler-name="raise_event">
+    <parameter>
+      <parameter name="actions_default">startup</parameter>
+      <parameter name="foo_default">foo_value</parameter>
+      <parameter name="bar_default">bar_value</parameter>
+      <parameter name="eventproperty_override">value_overridden</parameter>
+      <parameter name="event_name">first-event</parameter>
+      <parameter name="time">+1</parameter>
+    </parameter>
+  </subscription>
+
+  <subscription event-name="first-event" handler-name="javascript">
+    <parameter>
+      <parameter name="filename1">/usr/share/dss/add-ons/sample/include.js</parameter>
+      <parameter name="filename2">/usr/share/dss/add-ons/sample/script1.js</parameter>
+      <parameter name="script_id">sample</parameter>
+    </parameter>
+  </subscription>
+
+  <subscription event-name="second-event" handler-name="javascript">
+    <parameter>
+      <parameter name="filename1">/usr/share/dss/add-ons/sample/include.js</parameter>
+      <parameter name="filename2">/usr/share/dss/add-ons/sample/script2.js</parameter>
+      <parameter name="script_id">sample</parameter>
+    </parameter>
+  </subscription>
+
+</subscriptions>
